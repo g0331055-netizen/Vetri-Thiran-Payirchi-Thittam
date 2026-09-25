@@ -1,0 +1,497 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+:root {
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #172033;
+
+    background: #f4f7fb;
+}
+
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    width: min(
+        980px,
+        92%
+    );
+
+    margin: 0 auto;
+
+    padding:
+        45px
+        0
+        70px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        7px
+        13px;
+
+    border-radius: 999px;
+
+    background: #e7efff;
+
+    color: #304f91;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            36px,
+            6vw,
+            58px
+        );
+
+    line-height: 1.05;
+
+    margin:
+        15px
+        0
+        10px;
+
+}
+
+
+.hero p {
+
+    color: #65748b;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    max-width: 720px;
+
+    margin:
+        0
+        auto;
+
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card,
+.result-card {
+
+    background: white;
+
+    border:
+        1px
+        solid
+        #e1e7f0;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0
+        12px
+        35px
+        rgba(
+            28,
+            44,
+            70,
+            0.06
+        );
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin:
+        15px
+        0
+        8px;
+
+}
+
+
+select,
+textarea,
+input {
+
+    width: 100%;
+
+    border:
+        1px
+        solid
+        #ccd5e3;
+
+    border-radius: 12px;
+
+    padding:
+        12px
+        14px;
+
+    font:
+        inherit;
+
+    background: #ffffff;
+
+}
+
+
+select:focus,
+textarea:focus,
+input:focus {
+
+    outline: none;
+
+    border-color: #65748b;
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 180px;
+
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+#submit {
+
+    margin-top: 18px;
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    background: #172033;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s,
+        opacity 0.15s;
+
+}
+
+
+#submit:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+#submit:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+
+    min-height: 22px;
+
+    margin-top: 10px;
+
+    color: #66758c;
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.result {
+
+    line-height: 1.75;
+
+    color: #35445d;
+
+}
+
+
+.result-card h2 {
+
+    margin-top: 0;
+
+}
+
+
+/* =====================================================
+   QUIZ
+===================================================== */
+
+.quiz-question {
+
+    border-top:
+        1px
+        solid
+        #e7ebf2;
+
+    padding:
+        20px
+        0;
+
+}
+
+
+.quiz-question h3 {
+
+    line-height: 1.5;
+
+}
+
+
+.options {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+.option {
+
+    text-align: left;
+
+    padding: 13px;
+
+    border:
+        1px
+        solid
+        #d6deea;
+
+    background: white;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font: inherit;
+
+}
+
+
+.option:hover {
+
+    background: #f7f9fc;
+
+    border-color: #8999b2;
+
+}
+
+
+.feedback {
+
+    margin-bottom: 0;
+
+    font-weight: 700;
+
+}
+
+
+.good {
+
+    color: #167447;
+
+}
+
+
+.bad {
+
+    color: #b33a3a;
+
+}
+
+
+/* =====================================================
+   LEARNING PATH
+===================================================== */
+
+.step {
+
+    border-top:
+        1px
+        solid
+        #e7ebf2;
+
+    padding:
+        20px
+        0;
+
+}
+
+
+.step h3 {
+
+    margin-top: 0;
+
+}
+
+
+.step p {
+
+    line-height: 1.65;
+
+}
+
+
+/* =====================================================
+   ERRORS
+===================================================== */
+
+.error {
+
+    color: #b3261e;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (
+    max-width: 650px
+) {
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 25px;
+
+    }
+
+
+    .card,
+    .result-card {
+
+        padding: 18px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 38px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+}

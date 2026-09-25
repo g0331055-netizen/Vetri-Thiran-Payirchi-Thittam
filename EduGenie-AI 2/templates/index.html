@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ app_name }} | Learning Assistant</title>
+	<link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+	<main class="container">
+		<header class="hero">
+			<span class="badge">AI LEARNING ASSISTANT</span>
+			<h1>{{ app_name }}</h1>
+			<p>Ask questions, explore difficult topics, build study plans, and test what you know.</p>
+		</header>
+
+		<section class="card">
+			<form id="learning-form">
+				<label for="mode">What would you like to do?</label>
+				<select id="mode" name="mode">
+					<option value="qa">Ask a question</option>
+					<option value="explain">Explain a topic</option>
+					<option value="summarize">Summarize text</option>
+					<option value="quiz">Create a quiz</option>
+					<option value="learn">Build a learning path</option>
+				</select>
+
+				<label for="prompt" id="prompt-label">Your question</label>
+				<textarea id="prompt" name="prompt" required placeholder="What would you like to learn?"></textarea>
+
+				<div id="level-field" class="hidden">
+					<label for="level">Learning level</label>
+					<select id="level" name="level">
+						<option value="beginner">Beginner</option>
+						<option value="intermediate">Intermediate</option>
+						<option value="advanced">Advanced</option>
+					</select>
+				</div>
+
+				<div id="question-count-field" class="hidden">
+					<label for="question-count">Number of questions</label>
+					<input id="question-count" name="question-count" type="number" min="1" max="20" value="5">
+				</div>
+
+				<button id="submit" type="submit">Get help</button>
+				<p id="status" class="status" role="status"></p>
+			</form>
+		</section>
+
+		<section id="result-card" class="result-card hidden" aria-live="polite">
+			<h2 id="result-title">Result</h2>
+			<div id="result" class="result"></div>
+		</section>
+	</main>
+	<script src="{{ url_for('static', path='css/js/app.js') }}"></script>
+</body>
+</html>
